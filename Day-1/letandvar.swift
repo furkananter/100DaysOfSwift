@@ -6,3 +6,7 @@
 //
 
 import Foundation
+let name = "Furkan"
+name = "Anter" // Error
+
+// name is a constant, so it can't be changed
