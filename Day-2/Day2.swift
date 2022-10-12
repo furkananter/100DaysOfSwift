@@ -28,5 +28,6 @@
     gameOver.toggle()
     // print(gameOver)
 
-    
+// önemli ama çok
+    let quote = "Then he tapped a sign saying \"Believe\" and walked away."
     //  
