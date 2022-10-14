@@ -18,7 +18,20 @@ var scoreTyps: Double = 32.5
 // bool, True ya da False tutar.
 // Arrays (diziler) birden çok değer tutar.
 
+// :String , string depolanmasını sağlar.
 let playerName: String = "Asmodeus"
+// :Int , integer depolanmasını sağlar.
+let playerScore: Int = 32
+// :Double , decimal depolanmasını sağlar.
+let playerScoreDouble: Double = 32.5
+// :Bool , true ya da false depolanmasını sağlar.
+let playersBool: Bool = True
+
+// Arrays (diziler) birden çok değer tutar. Örneğin:
+let playersArray: [String] = ["Furkan", "Ömer"]
+// 
+
+// 
 
 
 
