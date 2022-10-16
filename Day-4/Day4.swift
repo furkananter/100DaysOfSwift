@@ -53,7 +53,7 @@ var kolas2: [String] = [String]()
 var kolas3: [String] = []
 
 // Ben type belirtmeyi mümkün olduğunca şöyle yapmaya çalışıyorum:
-var kolas4: [String]()
+var kolas4 = [String]()
 
 // Bunların yanında Enum (enumaration) da bir type belirtme yöntemidir. Örneğin:
 // enumlar kendi type'larımızı yazmamıza yarar. Enum'un değerleri aynı tipte type'lar olmak zorundadır.
