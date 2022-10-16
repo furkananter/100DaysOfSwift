@@ -68,24 +68,62 @@ import Foundation
 
 // Kompleks bir örnek üzerinden if else
 
+//* Örnek
+// enum Weather {
+//     case sun, rainy, cloud, snow, cold
+// }
 
-enum Weather {
-    case sun, rainy, cloud, snow, cold
-}
+// var forecast = Weather.sun
 
-var forecast = Weather.sun
+// switch forecast {
+//     case .sun:
+//         print("it is a sunny day")
+//     case .rainy: 
+//         print("it is a rainy day")
+//     case .cloud:
+//         print("it is a cloud day")
+//     case .snow:
+//         print("it is a snowly day")
+//     case .cold:
+//         print("it is a cold day")
+// }
 
-switch forecast {
-    case .sun:
-        print("it is a sunny day")
-    case .rainy: 
-        print("it is a rainy day")
-    case .cloud:
-        print("it is a cloud day")
-    case .snow:
-        print("it is a snowly day")
-    case .cold:
-        print("it is a cold day")
-}
+//* Örnek
 
+// let day = 5
+// print("My true love gave to me…")
 
+// switch day {
+// case 5:
+//     print("5 golden rings")
+// case 4:
+//     print("4 calling birds")
+// case 3:
+//     print("3 French hens")
+// case 2:
+//     print("2 turtle doves")
+// default:
+//     print("A partridge in a pear tree")
+// }
+
+//* Örnek
+
+// let day = 5
+// print("My true love gave to me…")
+
+// switch day {
+// case 5:
+//     print("5 golden rings")
+//     fallthrough
+// case 4:
+//     print("4 calling birds")
+//     fallthrough
+// case 3:
+//     print("3 French hens")
+//     fallthrough
+// case 2:
+//     print("2 turtle doves")
+//     fallthrough
+// default:
+//     print("A partridge in a pear tree")
+// }
