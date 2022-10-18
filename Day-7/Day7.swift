@@ -85,3 +85,35 @@ import Cocoa
 // }
 // let user = getUser()
 // print("Name :\(user["name", default:"Anonymous"]) Surname: \(user["surname", default: "Anonymous"])")
+
+// Tuples:
+// func getUser() -> (firstName: String, secondName: String) {
+//     (firstName: "Furkan", secondName: "x")
+// }
+// let oylesine = getUser()
+// print("İsminiz: \(oylesine.firstName) \(oylesine.secondName)")
+
+// Tuples , sadece parametre String olacak sekilde falan dümenden
+// func getUser() -> (String, String) {
+//     ("Taylor","Swift")
+// }
+// let users = getUser()
+// print("Username: \(users.0) \(users.1)")
+
+//* Dümenden bi örnek daha
+
+
+// func getUser() -> (firstName: String, lastName: String) {
+//     (firstName: "Taylors",lastName:"Swift")
+// }
+// let users = getUser()
+// let first = users.firstName
+// let last = users.lastName
+
+// print("Username: \(first) \(last)")
+
+//* Kolay yollardan biri
+// let (firstName, lastName) = getUser()
+// print("Username: \(firstName) \(lastName)")
+
+
