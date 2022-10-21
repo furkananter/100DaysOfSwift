@@ -25,17 +25,23 @@ style()
 
 
 // *
-var greetCopy: () -> Void = style
+// var greetCopy: () -> Void = style
 
 
-func getVal(for id: Int) -> String {
-    if id == 1964 {
-       return "Furkans"
-    }else{
-       return "Şevval"
-    }
-}
+// func getVal(for id: Int) -> String {
+//     if id == 1964 {
+//        return "Furkans"
+//     }else{
+//        return "Şevval"
+//     }
+// }
 
-let data: (Int) -> String = getVal
-let user = data(19624)
-print(user)
+// let data: (Int) -> String = getVal
+// let user = data(19624)
+// print(user)
+
+// Sorted()
+
+let team = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+let sortedTeam = team.sorted()
+print(sortedTeam)
