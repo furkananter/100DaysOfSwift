@@ -41,7 +41,32 @@ style()
 // print(user)
 
 // Sorted()
+// uzun olarak böyle yapabiliriz. ama closure kullanarak daha kısa bir şekilde yapabiliriz.
+// let team = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+// let sortedTeam = team.sorted()
+// print(sortedTeam)
 
-let team = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
-let sortedTeam = team.sorted()
+// func getFirstOrder(name1: String, name2: String) -> Bool {
+//     if name1 == "şevvals" {
+//         return true
+//     }else if name2 == "şevvals" {
+//         return false
+//     }
+//    return name1 < name2 
+// }
+// let getFirstTeam = team.sorted(by: getFirstOrder)
+// print(getFirstTeam)
+// daha kısa yolu da şu:
+
+let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+let sortedTeam = team2.sorted(by:{(name1: String, name2: String) -> Bool in 
+    if name1 == "şevvals"{
+        return true
+    }else if name2 == "şevvals"{
+        return false
+    }
+    return name1 < name2
+})
 print(sortedTeam)
+
+//
