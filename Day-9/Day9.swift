@@ -58,15 +58,40 @@ style()
 // print(getFirstTeam)
 // daha kısa yolu da şu:
 
+// let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+// let sortedTeam = team2.sorted(by:{(name1: String, name2: String) -> Bool in 
+//     if name1 == "şevvals"{
+//         return true
+//     }else if name2 == "şevvals"{
+//         return false
+//     }
+//     return name1 < name2
+// })
+// print(sortedTeam)
+
+// bu da farklı bir gösterimi
+
+// let sortedTeamChanged = team2.sorted(by: {(name1, name2) in 
+//     if name1 == "şevvals"{
+//         return true
+//     }else if name2 == "şevvals"{
+//         return false
+//     }
+//     return name1 < name2
+// })
+
+// print(sortedTeamChanged)
+
+// bu da farklı bir gösterimi
+
 let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
-let sortedTeam = team2.sorted(by:{(name1: String, name2: String) -> Bool in 
-    if name1 == "şevvals"{
+let sortedTeamChanged2 = team2.sorted{
+    if $0 == "şevvals"{
         return true
-    }else if name2 == "şevvals"{
+    }else if $1 == "şevvals"{
         return false
     }
-    return name1 < name2
-})
-print(sortedTeam)
+    return $0 < $1
+}
 
-//
+print(sortedTeamChanged2)
