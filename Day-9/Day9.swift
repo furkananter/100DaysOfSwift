@@ -1,12 +1,12 @@
 import Cocoa
 
-// func getUser() {
-//     print("user")
-// }
-// getUser()
+func getUser() {
+    print("user")
+}
+getUser()
 
-// var userss = getUser
-// userss()
+var userss = getUser
+userss()
 
 // degiskeni fonksiyona dönüstürmek
 
@@ -19,89 +19,89 @@ style()
 // in kullanmak zorundayız çünkü diğer türlü bunu parametreli bir fonksiyona döndüremeyiz.
 
 
-// let user = { (name: String) -> String in
-//     "Hello \(name)"
-// }
+let user = { (name: String) -> String in
+    "Hello \(name)"
+}
 
 
 // *
 // var greetCopy: () -> Void = style
 
 
-// func getVal(for id: Int) -> String {
-//     if id == 1964 {
-//        return "Furkans"
-//     }else{
-//        return "Şevval"
-//     }
-// }
+func getVal(for id: Int) -> String {
+    if id == 1964 {
+       return "Furkans"
+    }else{
+       return "Şevval"
+    }
+}
 
-// let data: (Int) -> String = getVal
-// let user = data(19624)
-// print(user)
+let data: (Int) -> String = getVal
+let user = data(19624)
+print(user)
 
 // Sorted()
 // uzun olarak böyle yapabiliriz. ama closure kullanarak daha kısa bir şekilde yapabiliriz.
-// let team = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
-// let sortedTeam = team.sorted()
-// print(sortedTeam)
+let team = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+let sortedTeam = team.sorted()
+print(sortedTeam)
 
-// func getFirstOrder(name1: String, name2: String) -> Bool {
-//     if name1 == "şevvals" {
-//         return true
-//     }else if name2 == "şevvals" {
-//         return false
-//     }
-//    return name1 < name2 
-// }
-// let getFirstTeam = team.sorted(by: getFirstOrder)
-// print(getFirstTeam)
+func getFirstOrder(name1: String, name2: String) -> Bool {
+    if name1 == "şevvals" {
+        return true
+    }else if name2 == "şevvals" {
+        return false
+    }
+   return name1 < name2 
+}
+let getFirstTeam = team.sorted(by: getFirstOrder)
+print(getFirstTeam)
 // daha kısa yolu da şu:
 
-// let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
-// let sortedTeam = team2.sorted(by:{(name1: String, name2: String) -> Bool in 
-//     if name1 == "şevvals"{
-//         return true
-//     }else if name2 == "şevvals"{
-//         return false
-//     }
-//     return name1 < name2
-// })
-// print(sortedTeam)
+let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+let sortedTeam = team2.sorted(by:{(name1: String, name2: String) -> Bool in 
+    if name1 == "şevvals"{
+        return true
+    }else if name2 == "şevvals"{
+        return false
+    }
+    return name1 < name2
+})
+print(sortedTeam)
 
 // bu da farklı bir gösterimi
 
-// let sortedTeamChanged = team2.sorted(by: {(name1, name2) in 
-//     if name1 == "şevvals"{
-//         return true
-//     }else if name2 == "şevvals"{
-//         return false
-//     }
-//     return name1 < name2
-// })
+let sortedTeamChanged = team2.sorted(by: {(name1, name2) in 
+    if name1 == "şevvals"{
+        return true
+    }else if name2 == "şevvals"{
+        return false
+    }
+    return name1 < name2
+})
 
-// print(sortedTeamChanged)
+print(sortedTeamChanged)
 
 // bu da farklı bir gösterimi
 
 let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
-// let sortedTeamChanged2 = team2.sorted{
-//     if $0 == "şevvals"{
-//         return true
-//     }else if $1 == "şevvals"{
-//         return false
-//     }
-//     return $0 < $1
-// }
+let sortedTeamChanged2 = team2.sorted{
+    if $0 == "şevvals"{
+        return true
+    }else if $1 == "şevvals"{
+        return false
+    }
+    return $0 < $1
+}
 
-// print(sortedTeamChanged2)
+print(sortedTeamChanged2)
 
-// eğer normal bir sorting işlemi gerçekleştirmek istiyorsak bunun için
-// let sortedDifferent = team2.sorted {
-//     return $0 > $1
-// } 
+//* eğer normal bir sorting işlemi gerçekleştirmek istiyorsak bunun için
+let sortedDifferent = team2.sorted {
+    return $0 > $1
+} 
 // daha kısa versiyonu : 
-// let sortedDifferent = team2.sorted { $0 > $1 }
+let sortedDifferent = team2.sorted { $0 > $1 }
 
 //! Filter Methodu (klasik filter işte, code review yap hiç anlatamam şimdi)
 
@@ -147,9 +147,9 @@ func makeArrays(size: Int, using generator: () -> Int) -> [Int] {
     return Array
 }
 
-// makeArrays(size: 5, using: {
-//     Int.random(in: 1...10)
-// })
+makeArrays(size: 5, using: {
+    Int.random(in: 1...10)
+})
 
 
 let rolls = makeArrays(size: 50) {
@@ -184,15 +184,15 @@ doImportantWork{
 }
 
 /*
-1. You can copy functions in Swift, and they work the same as the original except they lose their external parameter names.
+*1. You can copy functions in Swift, and they work the same as the original except they lose their external parameter names.
 
 2. All functions have types, just like other data types. 
 This includes the parameters they receive along with their return type, 
 which might be Void – also known as “nothing”.
 
-3. You can create closures directly by assigning to a constant or variable.
+*3. You can create closures directly by assigning to a constant or variable.
 
-4. Closures that accept parameters or return a value must declare this inside their braces, followed by the keyword in.
+*4. Closures that accept parameters or return a value must declare this inside their braces, followed by the keyword in.
 
 5. Functions are able to accept other functions as parameters. 
 They must declare up front exactly what data those functions must use, 
@@ -205,7 +205,7 @@ and Swift will ensure the rules are followed.
 you don’t need to explicitly write out the types inside your closure if Swift can figure it out automatically. 
 The same is true for the return value – if Swift can figure it out, you don’t need to specify it.
 
-8. If one or more of a function’s final parameters are functions, you can use trailing closure syntax.
+*8. If one or more of a function’s final parameters are functions, you can use trailing closure syntax.
 
 9. You can also use shorthand parameter names such as $0 and $1, 
 but I would recommend doing that only under some conditions.
