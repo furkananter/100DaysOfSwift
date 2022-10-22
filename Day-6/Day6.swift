@@ -1,25 +1,27 @@
 import Cocoa
 // while döngüsü, count için
 
-// var count = 10
-// while count > 0 {
-//     count -= 1
-//     print(count)
-// }
+var count = 10
+while count > 0 {
+    count -= 1
+    print(count)
+}
 
-// for döngüsü
+//for döngüsü
 
-// var i = 0
-// for item in 1...12 {
-//     i += 1
-//     print(i)
+var i = 0
+for item in 1...12 {
+    i += 1
+    print(i)
     
-// }
+}
     
-// random olayları
+//random olayları
 
-// let id = Int.random(in: 1...100)
-// print(id)
+let id = Int.random(in: 1...100)
+print(id)
+
+
 //* Multiple çözümü yaptık
 //? Bu ne GARDAŞ? Açıklıyom:
 //* 1. Önce 2 tane numara oluşturdum ve bunlara bir değer atadım.
@@ -32,17 +34,18 @@ import Cocoa
     //* sonra da multiple array'ini yazdırıyoruz.
     //* 😘
 //! şu let'i hiç sevmedim yokmuymuş const
-// let number1 = 5
-// let number2 = 17
-// var multiples = [Int]()
 
-// for i in 1...100_000{
-//     if i.isMultiple(of: number1) && i.isMultiple(of: number2){
-//         multiples.append(i)
-//     }
-//     if multiples.count == 10 {
-//         break
-//     }
-// }
-// print(multiples)
-// 
+
+let number1 = 5
+let number2 = 17
+var multiples = [Int]()
+
+for i in 1...100_000{
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2){
+        multiples.append(i)
+    }
+    if multiples.count == 10 {
+        break
+    }
+}
+print(multiples)

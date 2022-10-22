@@ -3,7 +3,7 @@ import Cocoa
 
 var greeting = "merhaba dunya"
 
-// print(greeting)
+print(greeting)
 
     // Gün 1: 
 /*
@@ -12,18 +12,18 @@ var greeting = "merhaba dunya"
  */ 
 
 greeting = "Selam dümenden"
-// print(greeting)
+print(greeting)
 greeting = "ikinci kez selam dedik ve değişti"
-// print(greeting)
+print(greeting)
 
     // var değiştirilebilir. let için deneyelim. 
 
 let isim = "furkan"
 // print(isim.count)
 
-// isim = "Kadir Hoca"
+isim = "Kadir Hoca"
     // görüldüğü üzere adımı kadir hoca yapamıyorum, nedeni ise let olması
-// print(isim)
+print(isim)
 
     // String oluştururken yukarıdaki gibi kullanırız fakat farklı şekillerde de oluşturulabilir.
 
@@ -31,12 +31,12 @@ let dumenden = """
     dümenden bir şeyler yazılacak buraya
     """
 
-// print(dumenden)
+print(dumenden)
 
     // """ kullanılırsa da string yazdırılabilir. Bunu birden fazla satır için kullanırız. 
     // .count ise length'ini vermek için kullanılır.
 
-// print(dumenden.count)
+print(dumenden.count)
 
 
     // SAYILAR
@@ -45,9 +45,9 @@ let dumenden = """
 let score1 = 100000000
 let score2 = 100_000_000
 let score3 = 1_0_0_0_0_0_0_0_0
-//print(score1)
-//print(score2)
-//print(score3)
+print(score1)
+print(score2)
+print(score3)
 
     // Integer'larda güzel bazı özellikler var:
     // isMultiple(of:) gibi...
@@ -56,21 +56,21 @@ let score3 = 1_0_0_0_0_0_0_0_0
 
 let multiple = 40
 
-// print(multiple.isMultiple(of: 5))
+print(multiple.isMultiple(of: 5))
 
     // DECIMAL SAYILAR
 
 let decimalss = 0.1
 let decimalss2 = 0.2
 
-// print(decimalss + decimalss2)
+print(decimalss + decimalss2)
 
     // Double... 
 
 let doublx = 0.1
 let intx = 3
     // toplatmazlar adama...
-// print(doublx + intx)
+print(doublx + intx)
 
 // Yapabilmek için şunu yapmak gerekiyo:
 // doublx 'imizi integer'a çevirdik.
@@ -78,4 +78,4 @@ let intx = 3
 // How to store Decimal numbers tek
 
 let toplams = Int(doublx) + intx
-// print(toplams)
+print(toplams)

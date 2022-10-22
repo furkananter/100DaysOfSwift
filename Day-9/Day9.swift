@@ -84,14 +84,23 @@ style()
 
 // bu da farklı bir gösterimi
 
-let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
-let sortedTeamChanged2 = team2.sorted{
-    if $0 == "şevvals"{
-        return true
-    }else if $1 == "şevvals"{
-        return false
-    }
-    return $0 < $1
-}
+// let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+// let sortedTeamChanged2 = team2.sorted{
+//     if $0 == "şevvals"{
+//         return true
+//     }else if $1 == "şevvals"{
+//         return false
+//     }
+//     return $0 < $1
+// }
 
-print(sortedTeamChanged2)
+// print(sortedTeamChanged2)
+
+// eğer normal bir sorting işlemi gerçekleştirmek istiyorsak bunun için
+// let sortedDifferent = team2.sorted {
+//     return $0 > $1
+// } 
+// daha kısa versiyonu : 
+// let sortedDifferent = team2.sorted { $0 > $1 }
+
+//* 

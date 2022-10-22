@@ -3,10 +3,10 @@
     
     
     let filename = "paris.jpg"
-    // print(filename.hasSuffix(".jpg"))
+print(filename.hasSuffix(".jpg"))
     
     let number = 120
-    // print(number.isMultiple(of: 3))
+print(number.isMultiple(of: 3))
     
     
     // yukarıdaki gibi number. demek yerine 120.isMultiple(of:3) diyebiliriz.
@@ -16,17 +16,17 @@
     var isAuth = false
     
     isAuth = !isAuth
-    // print(isAuth)
+    print(isAuth)
     isAuth = !isAuth
-    // print(isAuth)
+    print(isAuth)
     
     
         // toggle()
     
     var gameOver = false
-    // print(gameOver)
+    print(gameOver)
     gameOver.toggle()
-    // print(gameOver)
+    print(gameOver)
 
 // önemli ama çok
     let quote = "Then he tapped a sign saying \"Believe\" and walked away."
