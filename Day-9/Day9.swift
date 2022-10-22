@@ -84,7 +84,7 @@ style()
 
 // bu da farklı bir gösterimi
 
-// let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
+let team2 = ["furkans", "ömers","mustafas","ayşes","alis","şevvals"]
 // let sortedTeamChanged2 = team2.sorted{
 //     if $0 == "şevvals"{
 //         return true
@@ -103,4 +103,113 @@ style()
 // daha kısa versiyonu : 
 // let sortedDifferent = team2.sorted { $0 > $1 }
 
-//* 
+//! Filter Methodu (klasik filter işte, code review yap hiç anlatamam şimdi)
+
+let filterlaBakalim = team2.filter{
+    $0.hasPrefix("ş")
+}
+print(filterlaBakalim)
+
+//! .map methodu (klasik map işte, code review yap hiç anlatamam şimdi)
+let maplaBakalim = team2.map{
+    $0.uppercased()
+}
+print(maplaBakalim)
+
+/*
+
+When you create a list of data on the screen, 
+SwiftUI will ask you to provide a function that accepts one item from the list and converts it something it can display on-screen.
+
+When you create a button, SwiftUI will ask you to provide one function to execute when the button is pressed, 
+and another to generate the contents of the button – a picture, or some text, and so on.
+
+Even just putting stacking pieces of text vertically is done using a closure.
+
+*/
+
+func greetUser() {
+    print("Hi there!")
+}
+
+greetUser()
+
+var greetCopy: () -> Void = greetUser
+greetCopy()
+
+// Fonksiyon kullanarak karmaşık sayı üreten bir Array oluşturmak
+func makeArrays(size: Int, using generator: () -> Int) -> [Int] {
+    var Array = [Int]()
+    for _ in 0..<size {
+        let NewNumber = generator()
+        Array.append(NewNumber)
+    }
+    return Array
+}
+
+// makeArrays(size: 5, using: {
+//     Int.random(in: 1...10)
+// })
+
+
+let rolls = makeArrays(size: 50) {
+    Int.random(in: 1...20)
+}
+// print(rolls)
+
+
+func generateNumber() -> Int {
+    Int.random(in: 1...10)
+}
+
+let numbers = makeArrays(size: 5, using: generateNumber)
+print(numbers)
+
+
+func doImportantWork(first: () -> Void , second: () -> Void, third: () -> Void) {
+    print("About to start first work")
+    first()
+    print("About to start second work")
+    second()
+    print("About to start third work")
+    third()
+}
+
+doImportantWork{
+    print("First work done")
+} second: {
+    print("Second work done")
+} third: {
+    print("Third work done")
+}
+
+/*
+1. You can copy functions in Swift, and they work the same as the original except they lose their external parameter names.
+
+2. All functions have types, just like other data types. 
+This includes the parameters they receive along with their return type, 
+which might be Void – also known as “nothing”.
+
+3. You can create closures directly by assigning to a constant or variable.
+
+4. Closures that accept parameters or return a value must declare this inside their braces, followed by the keyword in.
+
+5. Functions are able to accept other functions as parameters. 
+They must declare up front exactly what data those functions must use, 
+and Swift will ensure the rules are followed.
+
+6. In this situation, instead of passing a dedicated function you can also pass a closure 
+– you can make one directly. Swift allows both approaches to work.
+
+7. When passing a closure as a function parameter, 
+you don’t need to explicitly write out the types inside your closure if Swift can figure it out automatically. 
+The same is true for the return value – if Swift can figure it out, you don’t need to specify it.
+
+8. If one or more of a function’s final parameters are functions, you can use trailing closure syntax.
+
+9. You can also use shorthand parameter names such as $0 and $1, 
+but I would recommend doing that only under some conditions.
+
+10. You can make your own functions that accept functions as parameters, 
+although in practice it’s much more important to know how to use them than how to create them.
+*/
