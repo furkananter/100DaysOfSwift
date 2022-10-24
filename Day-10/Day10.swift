@@ -43,3 +43,16 @@ print(archer.VacationRemaining)
 
 var archer1: Employee = Employee(name: "ARcher", VacationRemaining: 14)
 var archer2: Employee = Employee.init(name: "Archer2", VacationRemaining: 112)
+
+
+
+struct TatilGunleri {
+    let otelAdi: String
+    var kalanTatilGunleri: Int
+}
+
+var turist = TatilGunleri(otelAdi: "Hilton", kalanTatilGunleri: 10 )
+turist.kalanTatilGunleri -= 2
+print(turist.kalanTatilGunleri)
+turist.kalanTatilGunleri -= 3
+print(turist.kalanTatilGunleri)
