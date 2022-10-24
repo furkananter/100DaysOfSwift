@@ -56,3 +56,42 @@ turist.kalanTatilGunleri -= 2
 print(turist.kalanTatilGunleri)
 turist.kalanTatilGunleri -= 3
 print(turist.kalanTatilGunleri)
+
+// Baaska bir örnek
+
+struct kissadanHisse{
+    let name: String
+    var tatilGunleri = 20
+    var yapilanTatilGunleri = 0
+
+    var mesaiSaatleri: Int {
+        tatilGunleri - yapilanTatilGunleri
+    }
+}
+
+var tatilciyiz = kissadanHisse(name: "Oylesine", tatilGunleri: 20)
+tatilciyiz.yapilanTatilGunleri += 4
+print(tatilciyiz.mesaiSaatleri)
+tatilciyiz.yapilanTatilGunleri += 4
+print(tatilciyiz.mesaiSaatleri)
+
+
+// Properties 
+
+struct kissadanHisse2 {
+    let name2: String
+    var tatilGunleri2: 15
+
+    var mesaiSaatleri2: Int {
+        get {
+           tatilGunleri2 - yapilanTatilGunleri
+        }
+        set {
+            tatilGunleri2 = yapilanTatilGunleri + newValue
+        }
+    }
+}
+
+var tatilciyiz2 = kissadanHisse2(name: "otelss",tatilGunleri2: 14)
+print(tatilyiciz2.mesaiSaatleri2 += 4
+print(tatilciyiz2.yapilanTatilGunleri)
