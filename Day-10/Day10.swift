@@ -95,3 +95,67 @@ struct kissadanHisse2 {
 var tatilciyiz2 = kissadanHisse2(name: "otelss",tatilGunleri2: 14)
 print(tatilyiciz2.mesaiSaatleri2 += 4
 print(tatilciyiz2.yapilanTatilGunleri)
+
+// Properties 
+
+struct Game {
+    var score = 0 {
+        didSet {
+            print("Score: \(score)")
+        }
+    }
+}
+
+var Futbolcu = Game()
+Futbolcu.score += 10
+Futbolcu.score += 12
+Futbolcu.score -= 2
+
+
+struct App {
+    var contacts = [String]() {
+        willSet {
+            print("Current value is: \(contacts)")
+            print("New value will be: \(newValue)")
+        }
+        didSet {
+            print("There are now \(contacts.count) contacts.")
+            print("Old value was \(oldValue)")
+        }
+    }
+}
+
+var app = App()
+app.contacts.append("Adriyan E")
+app.contacts.append("Adriyan F")
+app.contacts.append("Adriyan G")
+app.contacts.append("Adriyan H")
+
+// INITIALIZERS
+
+struct Player1 {
+    let name1: String
+    let number1: Int
+}
+
+var player1 = Player1(name: "Furkan", number: 10)
+
+print(player1.name)
+
+// Initli versiyonu
+
+struct Player2 {
+    let name2: String
+    let number2: Int
+    init(name: String /*, number: Int */) {
+        self.name = name
+        //self.number = number
+        number = Int.random(in: 1...100)
+    }
+}
+
+var player2 = Player2(name2: "Furkan" //number2: 10)
+
+print(player2.name)
+
+
