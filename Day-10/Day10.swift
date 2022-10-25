@@ -80,21 +80,20 @@ print(tatilciyiz.mesaiSaatleri)
 
 struct kissadanHisse2 {
     let name2: String
-    var tatilGunleri2: 15
-
+    var tatilGunleri2: Int
     var mesaiSaatleri2: Int {
         get {
-           tatilGunleri2 - yapilanTatilGunleri
+           tatilGunleri2 - yapilanTatilGunleri2
         }
         set {
-            tatilGunleri2 = yapilanTatilGunleri + newValue
+            tatilGunleri2 = yapilanTatilGunleri2 + newValue
         }
     }
 }
 
 var tatilciyiz2 = kissadanHisse2(name: "otelss",tatilGunleri2: 14)
-print(tatilyiciz2.mesaiSaatleri2 += 4
-print(tatilciyiz2.yapilanTatilGunleri)
+print(tatilyiciz2.mesaiSaatleri2 += 4)
+print(tatilciyiz2.yapilanTatilGunleri2)
 
 // Properties 
 
@@ -138,23 +137,23 @@ struct Player1 {
     let number1: Int
 }
 
-var player1 = Player1(name: "Furkan", number: 10)
+var player1 = Player1(name1: "Furkan", number1: 10)
 
-print(player1.name)
+print(player1.name1)
 
 // Initli versiyonu
 
 struct Player2 {
     let name2: String
     let number2: Int
-    init(name: String /*, number: Int */) {
-        self.name = name
+    init(name2: String /*, number: Int */) {
+        self.name2 = name2
         //self.number = number
-        number = Int.random(in: 1...100)
+        number2 = Int.random(in: 1...100)
     }
 }
 
-var player2 = Player2(name2: "Furkan" //number2: 10)
+var player2 = Player2(name2: "Furkan" /*number2: 10*/)
 
 print(player2.name)
 
