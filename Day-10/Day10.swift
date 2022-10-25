@@ -147,14 +147,26 @@ struct Player2 {
     let name2: String
     let number2: Int
     init(name2: String /*, number: Int */) {
-        self.name2 = name2
+        self.name = name2
         //self.number = number
         number2 = Int.random(in: 1...100)
     }
 }
 
-var player2 = Player2(name2: "Furkan" /*number2: 10*/)
+var player2 = Player2(name2: "Furkan" /* number2: 10 */)
 
 print(player2.name)
 
 
+/*
+Important: Although you can call other methods of your struct inside your initializer, 
+you can’t do so before assigning values to all your properties – Swift needs to be sure everything is safe before doing anything else.
+
+
+You can add multiple initializers to your structs if you want, 
+as well as leveraging features such as external parameter names and default values. 
+However, as soon as you implement your own custom initializers you’ll lose access to Swift’s generated memberwise initializer unless you take extra steps to retain it. 
+This isn’t an accident: if you have a custom initializer,
+Swift effectively assumes that’s because you have some special way to initialize your properties, 
+which means the default one should no longer be available.
+*/
