@@ -38,3 +38,6 @@ let novall = Developer(hours: 5)
 robert.printSummary()
 joseph.work()
 
+
+// How to add initializers for classes:
+
