@@ -12,9 +12,16 @@ class Employee {
     }
 
 }
+// class Developer: Employee {
+//     func work() {
+//         print("I am writing code for \(hours) hours")
+//     }
+// }
+
+// New Version:
 class Developer: Employee {
-    func work() {
-        print("I am writing code for \(hours) hours")
+    override func printSummary() {
+        print("I'm a developer who will sometimes work \(hours) hours a day, but other times spend hours arguing about whether code should be indented using tabs or spaces.")
     }
 }
 
@@ -27,6 +34,7 @@ class Manager: Employee {
 let robert = Developer(hours: 8)
 let joseph = Manager(hours: 10)
 let novall = Developer(hours: 5)
-novall.printSummary()
-robert.work()
+//novall.printSummary()
+robert.printSummary()
 joseph.work()
+
