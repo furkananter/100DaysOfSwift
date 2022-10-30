@@ -1,4 +1,4 @@
-# 100DaysOfSwift
+# 100DaysOfSwiftUI
  I focused myself to learn Swift in 100 days.
 
 Day 1 ✅ |
