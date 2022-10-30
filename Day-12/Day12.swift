@@ -126,3 +126,5 @@ var kadın = Adamlar()
 kadın.adam = "Deniz ve Çakıl"
 kadın = Adamlar()
 print(kadın.adam)
+
+
