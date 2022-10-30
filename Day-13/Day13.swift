@@ -1,5 +1,5 @@
 import Cocoa
-
+// Protocol Konusu
 func commute(distance: Int, using vehicle: Car){
     // lots of code here
 }
@@ -26,3 +26,5 @@ struct Car : Vehicle {
     }
     func openSunroof(){print("It's a nice day!")}
 }
+
+// Protocol Konusu
