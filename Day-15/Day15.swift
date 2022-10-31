@@ -526,8 +526,16 @@ struct Employee {
     var vacationAllocated: Int
     var vacationUsed: Int
 
-    var vacationLeft: Int {
-        vacationAllocated - vacationUsed
+    // var vacationLeft: Int {
+    //     vacationAllocated - vacationUsed
+    // }
+    var vacationRemaining: Int {
+        get {
+            vacationAllocated - vacationUsed
+        }
+        set {
+            vacationUsed = vacationAllocated - newValue
+        }
     }
 }
 
@@ -541,6 +549,20 @@ struct Employee {
 // ------------------25-------------------
 // 👇🏻 Property Observers 👇🏻
 print("--------------------")
+struct Game {
+    var score = 0 {
+        didSet {
+            print("Score is now \(score)")
+        }
+    }
+}
+
+var propertyGame = Game()
+propertyGame.score += 10
+propertyGame.score -= 3
+
+
+
 // 👆🏻 Property Observers 👆🏻
 
 
@@ -551,6 +573,17 @@ print("--------------------")
 // ------------------26-------------------
 // 👇🏻 Custom Initializers 👇🏻
 print("--------------------")
+
+struct Player {
+    let name: String
+    let number: Int
+
+    init(name: String){
+        self.name = name
+        number = Int.random(in: 1...99)
+    }
+}
+
 // 👆🏻 Custom Initializers 👆🏻
 
 
@@ -561,6 +594,8 @@ print("--------------------")
 // ------------------27-------------------
 // 👇🏻 Access control 👇🏻
 print("--------------------")
+
+
 // 👆🏻 Access control 👆🏻
 
 
@@ -569,6 +604,12 @@ print("--------------------")
 // ------------------28-------------------
 // 👇🏻 Static properties and methods 👇🏻
 print("--------------------")
+
+struct AppData {
+    static let version = "1.3 beta 2"
+    static let settings = "Settings.json"
+}
+print(AppData.version)
 // 👆🏻 Static properties and methods 👆🏻
 
 
@@ -577,6 +618,8 @@ print("--------------------")
 // ------------------29-------------------
 // 👇🏻 Classes 👇🏻
 print("--------------------")
+
+
 // 👆🏻 Classes 👆🏻
 
 
