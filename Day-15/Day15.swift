@@ -252,8 +252,8 @@ switch forecast {
         print("It's rainy")
     case .wind:
         print("It's windy")
-    default:
-        print("It's something else")
+    // default:
+    //     print("It's something else")
 }
 
 
@@ -618,11 +618,84 @@ print(AppData.version)
 // ------------------29-------------------
 // 👇🏻 Classes 👇🏻
 print("--------------------")
+class CEmployee {
+    let hours: Int
+    init (hours: Int) {
+        self.hours = hours
+    }
+    func printSummary() {
+        print("I worked \(hours) hours this week.")
+    }
+}
 
+class CDeveloper : CEmployee {
+    func work(){
+        print("I'm coding for \(hours) hours.")
+    }
+    override func printSummary() {
+        print("I'm a developer and I worked \(hours) hours this week.")
+    }
+}
+
+let novall = CDeveloper(hours: 40)
+novall.work()
+novall.printSummary()
+
+
+class CVehicle {
+    let isElectric: Bool
+
+    init(isElectric: Bool){
+        self.isElectric = isElectric
+    }
+
+}
+
+class CCar: CVehicle {
+    let isConvertible: Bool
+
+    init(isElectric: Bool, isConvertible: Bool){
+        self.isConvertible = isConvertible
+        super.init(isElectric: isElectric)
+    }}
+
+
+class Singer {
+    var name = "Taylor Swift"
+}
+var singer1 = Singer()
+print("Singer 1: \(singer1.name)")
+var singer2 = singer1
+singer2.name = "Justin Bieber"
+print("Singer 1: \(singer1.name)")
+print("Singer 2: \(singer2.name)")
+
+
+class CUser {
+    let id: Int
+    init(id: Int) {
+        self.id = id
+        print("I am alive \(id)")
+    }
+    deinit {
+        print("I am dead \(id)")
+    } 
+}
+
+// for i in 1...3 {
+//     let user = CUser(id: 1)
+//     print("User \(id): I'm in control! ")
+// }
+
+class CUser2{
+    var name = "Paul"
+}
+
+let cuser = CUser2()
+cuser.name = "Taylor Swift"
+print(cuser.name)
 
 // 👆🏻 Classes 👆🏻
-
-
 
 
 
@@ -630,6 +703,40 @@ print("--------------------")
 // ------------------30-------------------
 // 👇🏻 Protocols 👇🏻
 print("--------------------")
+
+// protocol PVehicle {
+//     func estimateTime(for distance: Int) -> Int
+//     func travel(distance: Int)
+// }
+
+// struct PCar: PVehicle {
+//     func estimateTime(for distance: Int) -> Int {
+//         distance / 50
+//     }
+//     func travel(distance: Int) {
+//         print("I am driving \(distance) km. ")
+//     }
+// }
+
+// func commute(distance: Int, using vehicle: PVehicle) {
+//     if vehicle.estimateTime(for: distance ) > 100 {
+//         print("Too Slow")
+//     }else {
+//         vehicle.travel(distance: distance) 
+//     }
+// }
+
+// let protocolCar = Car()
+// commute(distance: 100, using: protocolCar)
+
+// protocol Vehicle {
+//     var protocolName: String { get }
+//     var currentPassengers: Int { get set }
+//     func estimateTime(for distance: Int) -> Int
+//     func travel(distance: Int)
+// } 
+// let protocolName = "Car"
+// var currentPassengers = 1
 // 👆🏻 Protocols 👆🏻
 
 
@@ -638,6 +745,35 @@ print("--------------------")
 // ------------------31-------------------
 // 👇🏻 Extensions 👇🏻
 print("--------------------")
+
+extension String {
+    var lines: [String] {
+        self.components(separatedBy: .newlines)
+    }
+    func trimmed() -> String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+var extensionQuote = "  Hello, world!   "
+let trimmedQuote = extensionQuote.trimmed()
+print(trimmedQuote)
+
+let lyrics = """
+But I keep cruising
+Can't stop, won't stop moving
+"""
+
+print(lyrics.lines.count)
+
+// extension Strings {
+//     mutating func trim(){
+//         self= self.trimmed()
+//     }
+// }
+// var extensionQ = extensionQuote.trim()
+// print(extensionQ)
+
 // 👆🏻 Extensions 👆🏻
 
 
@@ -648,6 +784,18 @@ print("--------------------")
 // ------------------32-------------------
 // 👇🏻 Protocol extensions 👇🏻
 print("--------------------")
+
+
+extension Collection {
+    var isNotEmpty: Bool {
+        isEmpty == false
+    }
+}
+let guess = ["Mario", "Luigi", "Peach"]
+if guess.isNotEmpty {
+    print("Guess count: \(guess.count)")
+}
+
 // 👆🏻 Protocol extensions 👆🏻
 
 
@@ -658,6 +806,18 @@ print("--------------------")
 // 👇🏻 Optionals 👇🏻
 print("--------------------")
 
+let opposites = [
+    "Mario": "Wario",
+    "Luigi": "Waluigi",
+]
+
+// böyle kullanmaya swift izin vermiyor.
+// let eachOpposite = opposites["Peach"]
+// print(eachOpposite)
+
+if let eachOpposite = opposites["Mario"]{
+    print("Mario's opposite is \(eachOpposite)")
+}
 // 👆🏻 Optionals 👆🏻
 
 
@@ -666,6 +826,14 @@ print("--------------------")
 // ------------------34-------------------
 // 👇🏻 Unwrapping optionals with guard 👇🏻
 print("--------------------")
+
+// func printSquare(of number: Int?) {
+//     guard let number == number else{
+//         print("You must pass a number")
+//         return
+//     }
+//     print("\(number) squared is \(number * number)")
+// }
 
 // 👆🏻 Unwrapping optionals with guard 👆🏻
 
@@ -676,6 +844,13 @@ print("--------------------")
 // 👇🏻 Nil coalescing 👇🏻
 print("--------------------")
 
+let tvShows = ["Archer", "Babylon 5", "Ted Lasso"]
+let favorite = tvShows.randomElement() ?? "None"
+print(favorite)
+
+let input = ""
+let nilInput = Int(input) ?? 0
+print(nilInput)
 // 👆🏻 Nil coalescing 👆🏻
 
 
@@ -683,6 +858,10 @@ print("--------------------")
 // ------------------36-------------------
 // 👇🏻 Optional chaining 👇🏻
 print("--------------------")
+let names = ["Arya", "Bran", "Robb", "Sansa"]
+let chosen = names.randomElement()?.uppercased()
+print("Next in line: \(chosen ?? "No one")")
+
 
 // 👆🏻 Optional chaining 👆🏻
 
@@ -691,5 +870,16 @@ print("--------------------")
 // ------------------37-------------------
 // 👇🏻 Optional try? 👇🏻
 print("--------------------")
+enum UserError : Error {
+    case badID, networkFailed
+}
+
+func getUser(id: Int) throws -> String {
+    throw UserError.badID
+}
+if let user = try? getUser(id: 1) {
+    print("User: \(user)")
+}
+
 
 // 👆🏻 Optional try? 👆🏻
