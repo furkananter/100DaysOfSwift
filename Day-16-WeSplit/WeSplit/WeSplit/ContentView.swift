@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
+    
     // FocusState ne işe yarar:
     // @State ile temelde hiçbir farkı yoktur ama input aracılığıyla bir veri çekeceğimiz sıra
     // focus tarafı için kullanılır.
@@ -58,11 +59,11 @@ struct ContentView: View {
                 Section {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "TRY"))
                 } // Section - 3
-                Section{
-                    Text(totalPerPerson, format: .number)
-                }// Section - 4
-                header: {
-                    Text("How many people?")
+                
+                Section {
+                    Text(checkAmount, format: .number)
+                } header: {
+                    Text("Total Amount for the Check")
                 }
             } // FORM
             .navigationTitle("WeSplit")
