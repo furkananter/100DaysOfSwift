@@ -11,6 +11,7 @@
 		DC4BE27429116B0500B1FF46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4BE27329116B0500B1FF46 /* ContentView.swift */; };
 		DC4BE27629116B0700B1FF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4BE27529116B0700B1FF46 /* Assets.xcassets */; };
 		DC4BE27929116B0700B1FF46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4BE27829116B0700B1FF46 /* Preview Assets.xcassets */; };
+		DCA7857D29181EE500F32226 /* ContentViewOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA7857C29181EE500F32226 /* ContentViewOld.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		DC4BE27329116B0500B1FF46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC4BE27529116B0700B1FF46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC4BE27829116B0700B1FF46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DCA7857C29181EE500F32226 /* ContentViewOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewOld.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		DC4BE27029116B0500B1FF46 /* WeSplit */ = {
 			isa = PBXGroup;
 			children = (
+				DCA7857C29181EE500F32226 /* ContentViewOld.swift */,
 				DC4BE27129116B0500B1FF46 /* WeSplitApp.swift */,
 				DC4BE27329116B0500B1FF46 /* ContentView.swift */,
 				DC4BE27529116B0700B1FF46 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC4BE27429116B0500B1FF46 /* ContentView.swift in Sources */,
+				DCA7857D29181EE500F32226 /* ContentViewOld.swift in Sources */,
 				DC4BE27229116B0500B1FF46 /* WeSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
