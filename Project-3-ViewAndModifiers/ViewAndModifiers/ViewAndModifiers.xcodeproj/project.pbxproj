@@ -11,6 +11,7 @@
 		DC2A27EB291D4B350059BD73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2A27EA291D4B350059BD73 /* ContentView.swift */; };
 		DC2A27ED291D4B360059BD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2A27EC291D4B360059BD73 /* Assets.xcassets */; };
 		DC2A27F0291D4B360059BD73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2A27EF291D4B360059BD73 /* Preview Assets.xcassets */; };
+		DC2A27F7291DA1AF0059BD73 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2A27F6291DA1AF0059BD73 /* ContentView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		DC2A27EA291D4B350059BD73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC2A27EC291D4B360059BD73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC2A27EF291D4B360059BD73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC2A27F6291DA1AF0059BD73 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				DC2A27E8291D4B350059BD73 /* ViewAndModifiersApp.swift */,
 				DC2A27EA291D4B350059BD73 /* ContentView.swift */,
+				DC2A27F6291DA1AF0059BD73 /* ContentView2.swift */,
 				DC2A27EC291D4B360059BD73 /* Assets.xcassets */,
 				DC2A27EE291D4B360059BD73 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2A27F7291DA1AF0059BD73 /* ContentView2.swift in Sources */,
 				DC2A27EB291D4B350059BD73 /* ContentView.swift in Sources */,
 				DC2A27E9291D4B350059BD73 /* ViewAndModifiersApp.swift in Sources */,
 			);
