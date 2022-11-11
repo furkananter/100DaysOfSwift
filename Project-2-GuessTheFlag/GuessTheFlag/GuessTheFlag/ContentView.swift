@@ -73,6 +73,18 @@ struct ContentView: View {
         
     }
     
+    struct FlagImage: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+                .background(.black)
+        }
+    }
+    
+    extension View {
+        func imageGenerator() -> some View {
+            modifier(FlagImage)
+        }
+    }
     
     func flagTapped(_ number: Int ){
         if number == correctAnswer {

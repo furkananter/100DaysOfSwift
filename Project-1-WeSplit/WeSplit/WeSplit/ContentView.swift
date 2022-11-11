@@ -58,10 +58,12 @@ struct ContentView: View {
                 } // Section -2 & Header
                 Section {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "TRY"))
+                        .foregroundColor(tipPercentage == 0 ? .red : .blue)
                 } // Section - 3
                 
                 Section {
                     Text(checkAmount, format: .number)
+                        .foregroundColor(tipPercentage == 0 ? .red : .blue)
                 } header: {
                     Text("Total Amount for the Check")
                 }

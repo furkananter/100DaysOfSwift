@@ -34,9 +34,11 @@ struct ContentView2: View {
             HStack{
                 Image(systemName: "\(row * 4 + col).circle")
                 Text("R \(row), C \(col)")
+                    .foregroundColor(.blue)
                     
             }
             .frame(width:70,height: 100)
+            .foregroundColor(.red)
             
         }
     }
