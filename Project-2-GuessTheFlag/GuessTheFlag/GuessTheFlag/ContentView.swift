@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
     @State private var countries = ["Turkey","Estonia", "France", "Germany", "Ireland", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
     @State private var correctAnswer = Int.random(in: 0...2)
@@ -22,7 +24,7 @@ struct ContentView: View {
                 .init(color: Color(red: 0.1, green: 0.8, blue: 0.45), location: 0.3),
                 .init(color: Color(red: 0.16, green: 0.15, blue: 0.80), location: 0.3),
             ], center: .top, startRadius: 200, endRadius: 400)
-                                        .ignoresSafeArea()
+            .ignoresSafeArea()
             // Main VStack
             VStack(spacing:40){
                 
@@ -36,18 +38,20 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .font(.subheadline.weight(.heavy))
                         Text(countries[correctAnswer])
+                            .title()
                             .foregroundColor(.white)
                             .font(.largeTitle.weight(.semibold))
+
                     }
                     ForEach(0..<3){ number in
                         Button {
                             flagTapped(number)
                         } label: {
                             Image(countries[number])
-                            
                                 .renderingMode(.original)
                                 .shadow(radius: 5)
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
                         }
                     }
                 }
@@ -60,30 +64,18 @@ struct ContentView: View {
                         .font(.title3)
                         .foregroundColor(.white)
                     Button("Yeniden Başlat",role: .destructive, action: resetTheGame)
-                    .buttonStyle(.borderedProminent)
+                        .buttonStyle(.borderedProminent)
                 }
                 .alert(scoreTitle, isPresented: $showingScore) {
                     Button("Continue", action: askQuestion)
                 } message: {
                     Text("Your score is \(score)")
+                        
                 }
             }
-
+            
         }
         
-    }
-    
-    struct FlagImage: ViewModifier {
-        func body(content: Content) -> some View {
-            content
-                .background(.black)
-        }
-    }
-    
-    extension View {
-        func imageGenerator() -> some View {
-            modifier(FlagImage)
-        }
     }
     
     func flagTapped(_ number: Int ){
@@ -116,5 +108,20 @@ struct ContentView: View {
             ContentView()
         }
     }
+    
 }
+struct Title: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle .weight(.bold))
+            .foregroundColor(.red)
+    }
+}
+extension View {
+    func title() -> some View {
+        modifier(Title())
+    }
+}
+
+
 
