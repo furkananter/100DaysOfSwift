@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            LinearGradient(colors: [Color.green, Color.yellow, Color.red] , startPoint: .top, endPoint: .bottom)
+            LinearGradient(colors: [Color.green,  Color.red] , startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
             
             VStack(spacing: 20) {
@@ -33,6 +33,7 @@ struct ContentView: View {
                                 .cornerRadius(20)
                                 .shadow(radius: 5)
                                 .clipShape(RoundedRectangle(cornerRadius: 20))
+                            
                         }
                     }
                 }
@@ -40,6 +41,7 @@ struct ContentView: View {
                 .padding(20)
             }
             .background(.thinMaterial)
+            .cornerRadius(15)
             .padding(10)
         }
     }
