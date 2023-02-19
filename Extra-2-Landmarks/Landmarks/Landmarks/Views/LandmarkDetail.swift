@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    @EnvironmentObject var modelData: ModelData
+    
     var landmark: Landmark
     var body: some View {
         ScrollView {
@@ -49,6 +51,6 @@ struct LandmarkDetail: View {
 
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail(landmark: landmarks[0])
+        LandmarkDetail(landmark: ModelData().landmarks[0])
     }
 }
